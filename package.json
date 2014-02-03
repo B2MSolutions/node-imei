@@ -1,0 +1,38 @@
+{
+  "name": "imei",
+  "version": "0.0.0",
+  "description": "Utilities for dealing with IMEIs",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/B2MSolutions/node-imei.git"
+  },
+  "keywords": [
+    "imei"
+  ],
+  "author": { "name": "B2M Solutions", "url": "https://github.com/B2MSolutions" },
+  "contributors": [
+    { "name": "Roy Lines", "url":"https://github.com/roylines" },
+    { "name": "James Bloomer", "url":"https://github.com/jamesbloomer" }
+  ],
+  "licenses": [{
+    "type": "MIT",
+    "url": "https://github.com/B2MSolutions/node-imei/raw/master/LICENSE"
+  }],
+  "bugs": {
+    "url": "https://github.com/B2MSolutions/node-imei/issues"
+  },
+	"dependencies": {
+  },
+  "devDependencies" : {
+    "mocha" : "x.x.x",
+    "sinon" : "x.x.x"
+	},
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.3.x"
+  }
+}
