@@ -10,14 +10,16 @@ node-imei is a helper module for IMEI validation and creation.
     $ npm install imei
 
 ## Usage
-  var imei = require('imei');
+``` javascript
+var imei = require('imei');
 
-  var anImei = '352099001761481';
-  var isValid = imei.isValid(anImei); // returns true
+var IMEI = '352099001761481';
+var isValid = imei.isValid(IMEI); // returns true
 
-  imei.next(anImei, function(e, next) {
+imei.next(IMEI, function(e, next) {
     console.log(next); // logs '352099001761499' (the next IMEI in the range)
-  });
+});
+```
 
 ### isValid(IMEI)
 Returns a boolean denoting whether the IMEI is valid see the [standards](http://en.wikipedia.org/wiki/International_Mobile_Station_Equipment_Identity). 
