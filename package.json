@@ -1,6 +1,6 @@
 {
   "name": "imei",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Utilities for dealing with IMEIs",
   "main": "index.js",
   "scripts": {
@@ -26,10 +26,11 @@
     "url": "https://github.com/B2MSolutions/node-imei/issues"
   },
 	"dependencies": {
+    "checkdigit": "*"
   },
   "devDependencies" : {
-    "mocha" : "x.x.x",
-    "sinon" : "x.x.x"
+    "mocha" : "*",
+    "sinon" : "*"
 	},
   "engines": {
     "node": "0.10.x",
