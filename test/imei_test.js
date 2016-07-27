@@ -5,6 +5,7 @@ describe('imei', function() {
   describe('isValid', function() {
     it('should return true for valid imeis', function() {
       assert(imei.isValid('352099001761481'));
+      assert(imei.isValid(352099001761481));
     });
 
     it('should return false for valid imeis', function() {
@@ -14,8 +15,15 @@ describe('imei', function() {
   });
 
   describe('next', function() {
-    it('should return next one for valid imei', function(done) {
+    it('should return next one for valid imei (string)', function(done) {
       imei.next('352099001761481', function(e, next) {
+        assert.equal(next, '352099001761499');
+        return done(e);
+      });
+    });
+
+    it('should return next one for valid imei (number)', function(done) {
+      imei.next(352099001761481, function(e, next) {
         assert.equal(next, '352099001761499');
         return done(e);
       });
@@ -27,7 +35,7 @@ describe('imei', function() {
         return done();
       });
     });
-    
+
     it('should return error when reaching the end of the TAC range', function(done) {
       imei.next('352099009999992', function(e, next) {
         assert.equal(e, 'no more IMEIs in TAC range');
